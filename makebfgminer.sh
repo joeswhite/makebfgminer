@@ -13,7 +13,7 @@ sudo apt-get install git build-essential autoconf automake libtool pkg-config li
 git clone https://github.com/signal11/hidapi ~/bfgminer/hidapi
 cd ~/bfgminer/hidapi
 sudo ./bootstrap
-sudo ./configure
+sudo ./configure  --prefix=/usr
 sudo make
 sudo make install
 git clone https://github.com/luke-jr/bfgminer.git ~/bfgminer
