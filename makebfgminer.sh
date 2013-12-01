@@ -10,7 +10,14 @@
 rm -rfv ~/bfgminer/bfgminer
 cd  ~/
 sudo apt-get install git build-essential autoconf automake libtool pkg-config libcurl4-gnutls-dev libjansson-dev uthash-dev libncursesw5-dev libudev-dev libusb-1.0-0-dev libevent-dev libmicrohttpd-dev uthash-dev
+git clone https://github.com/signal11/hidapi ~/bfgminer/hidapi
+cd ~/bfgminer/hidapi
+sudo ./bootstrap
+sudo ./configure
+sudo make
+sudo make install
 git clone https://github.com/luke-jr/bfgminer.git ~/bfgminer
+cd ~/bfgminer
 cd ~/bfgminer
 ./autogen.sh
 ./configure
