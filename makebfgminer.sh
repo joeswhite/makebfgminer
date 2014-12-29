@@ -6,7 +6,7 @@
 #BTC (BitCoin) donation address 1FRCJoeWXbYe47cmuW3do8VoqAr9HuWbpJ
 #Released on 10/29/13
 #
-#Version 0.002a
+#Version 0.003b
 rm -rfv ~/bfgminer/bfgminer
 cd  ~/
 sudo apt-get install git build-essential autoconf automake libtool pkg-config libcurl4-gnutls-dev libjansson-dev uthash-dev libncursesw5-dev libudev-dev libusb-1.0-0-dev libevent-dev libmicrohttpd-dev uthash-dev
@@ -16,9 +16,9 @@ sudo ./bootstrap
 sudo ./configure  --prefix=/usr
 sudo make
 sudo make install
-git clone https://github.com/luke-jr/bfgminer.git ~/bfgminer
-cd ~/bfgminer
-cd ~/bfgminer
+#fix as noted by phillpafford (https://github.com/joeswhite/makebfgminer/issues/1)
+git clone https://github.com/luke-jr/bfgminer.git ~/bfgminer/bfgminer
+cd ~/bfgminer/bfgminer
 ./autogen.sh
 ./configure
 make
